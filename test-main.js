@@ -20,7 +20,7 @@ require.config({
   deps: allTestFiles,
 
   paths: {
-    "lodash": '//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.0.1/lodash.min'
+    "lodash": 'https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min'
   },
 
   // we have to kickoff jasmine, as it is asynchronous

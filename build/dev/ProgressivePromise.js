@@ -1,12 +1,3 @@
-;(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    define([], factory);
-  } else if (typeof exports === 'object') {
-    module.exports = factory();
-  } else {
-    root.ProgressivePromise = factory();
-  }
-}(this, function() {
 "use strict";
 /* globals window: false, Promise: false */
 
@@ -61,5 +52,3 @@ function ProgressivePromise(fn) {
 
 	return promise;
 }
-return ProgressivePromise;
-}));

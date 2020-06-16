@@ -80,16 +80,16 @@ gulp.task("jshint:specs", function() {
 		.pipe(jshint.reporter("fail"));
 });
 
-gulp.task("default", ["build:dev", "build:dist"]);
+gulp.task("default", gulp.series("build:dev", "build:dist"));
 
-gulp.task("test", ["jshint:specs", "build:dev", "build:dist"], function(done) {
+gulp.task("test", gulp.series("jshint:specs", "build:dev", "build:dist", function(done) {
 	new KarmaServer({
 	    configFile: __dirname + '/karma.conf.js',
 	    singleRun: true
 	  }, done).start();
-});
+}));
 
-gulp.task("example", ["build:dev"], function() {
+gulp.task("example", gulp.series("build:dev", function() {
 	gulp.src("./")
 		.pipe(webserver({
             directoryListing: false,
@@ -100,4 +100,4 @@ gulp.task("example", ["build:dev"], function() {
             ],
             port: 8000
 		}));
-});
+}));

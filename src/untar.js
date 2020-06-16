@@ -79,14 +79,16 @@ var decoratedFileProps = {
 			var byteCount = charCount * charSize;
 			var bufferView = new DataView(buffer);
 
-			var charCodes = [];
-
+			//var charCodes = [];
+			var string = "";
 			for (var i = 0; i < charCount; ++i) {
 				var charCode = bufferView.getUint8(i * charSize, true);
-				charCodes.push(charCode);
+				string +=String.fromCharCode(charCode);
+				//charCodes.push(charCode);
 			}
 
-			return (this._string = String.fromCharCode.apply(null, charCodes));
+			//return (this._string = String.fromCharCode.apply(null, charCodes));
+			return (this._string = string);
 		}
 	},
 	readAsJSON: {

@@ -16,7 +16,7 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       'https://www.promisejs.org/polyfills/promise-6.1.0.js',
-      //'https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.0.1/lodash.min.js',
+      //'https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js',
       {pattern: 'build/**/**/*.js', included: false},
       {pattern: 'spec/**/*.*', included: false},
       'test-main.js'
