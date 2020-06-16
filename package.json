@@ -1,5 +1,5 @@
 {
-  "name": "js-untar",
+  "name": "js-untar-lhc",
   "version": "2.1.1",
   "description": "untar files in the browser",
   "main": "build/dist/untar",
